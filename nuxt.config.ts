@@ -18,5 +18,8 @@ export default defineNuxtConfig({
         'plugins/ButterCMS.ts'
       ]
     }
+  },
+  router: {
+    trailingSlash: true
   }
 })
