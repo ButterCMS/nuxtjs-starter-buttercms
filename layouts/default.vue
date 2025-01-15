@@ -15,7 +15,7 @@ const { items, loading } = useMenuItems();
 const {error} = useApiError()
 const config = useRuntimeConfig();
 
-const apiKeyExists = !!config.API_KEY
+const apiKeyExists = !!config.public.API_KEY
 
 onMounted(() => {
   window.addEventListener("load", scrollToSection);
