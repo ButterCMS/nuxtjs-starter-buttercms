@@ -1,4 +1,4 @@
-![recommended node version](https://img.shields.io/badge/node-v16-green)
+![recommended node version](https://img.shields.io/badge/node-v22-green)
 
 # Nuxt.js + ButterCMS Starter Project
 
@@ -44,3 +44,42 @@ Deploy your Nuxt.js app using Vercel, the creators of Next.js, or with Heroku. W
 
 ## 5. Previewing Draft Changes
 By default, your starter project is set up to allow previewing of draft changes saved in your ButterCMS.com account. To disable this functionality, set the following value in your .env file: NUXT_ENV_BUTTER_PREVIEW=false
+
+## 6. Project Dependencies
+
+The project uses the following key dependencies:
+
+- **Nuxt**: ^3.16.2 - Modern, performant Vue framework
+- **Vue**: ^3.5.13 - Progressive JavaScript framework
+- **ButterCMS**: ^3.0.1 - Headless CMS
+- **tiny-slider**: ^2.9.4 - Lightweight slider library
+
+### Node.js Compatibility
+
+This project requires Node.js v22 or newer.
+
+## 7. TypeScript Support
+
+TypeScript is supported in this project through Nuxt's built-in TypeScript integration. A custom type declaration file (`nuxt-types.d.ts`) provides type hints for Nuxt's auto-imported composables.
+
+## 8. Development Notes
+
+- The project uses Nuxt 3's auto-import feature for composables (useRoute, useRouter, etc.)
+- Compatibility date is set to ensure consistent behavior across different Nuxt versions
+- ButterCMS integration is configured in `plugins/ButterCMS.ts`
+
+## 9. Versioning
+
+This project follows [Semantic Versioning](https://semver.org/) (SemVer). The current version is 2.0.0.
+
+Versioning information is maintained in multiple places:
+- `package.json` - Contains the current version number
+- `CHANGELOG.md` - Documents changes between versions
+- Git tags - Each release is tagged with its version number
+- `nuxt.config.ts` - Exports APP_VERSION constant and makes it available via runtimeConfig
+
+To access the version in your components:
+```js
+const config = useRuntimeConfig();
+console.log(config.public.APP_VERSION); // "2.0.0"
+```
