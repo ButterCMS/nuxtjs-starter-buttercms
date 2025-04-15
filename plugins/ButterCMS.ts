@@ -1,7 +1,8 @@
-import Butter, {ButterStatic} from "buttercms";
+import Butter from "buttercms";
 import {defineNuxtPlugin, useRuntimeConfig} from "#app";
 
-export let butterCMS:ButterStatic | undefined = undefined;
+// Define a type for the Butter instance since ButterStatic is no longer exported
+export let butterCMS: any | undefined = undefined;
 
 export default defineNuxtPlugin(nuxtApp => {
   const config = useRuntimeConfig();
